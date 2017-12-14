@@ -1,0 +1,45 @@
+{
+  "name": "AKTA logger",
+  "description": "Adds server logs sent from PHP (via ChromePhp) to browser console",
+  "version": "1.17",
+  "manifest_version": 2,
+  "homepage_url": "https://addons.mozilla.org/ro/firefox/addon/akta-logger/",
+  "author": "nicu alcea",
+  "developer": {
+    "name": "nicu alcea",
+    "url": "https://github.com/alceanicu/akta-logger"
+  },
+  "applications": {
+    "gecko": {
+      "strict_min_version": "57.0"
+    }
+  },
+  "browser_action": {
+    "default_icon": "icons/icon38_disabled.png",
+    "default_title": "Logger"
+  },
+  "background": {
+    "scripts": [
+      "background_scripts/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content_scripts/log.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "webRequest",
+    "tabs",
+    "<all_urls>",
+    "storage"
+  ]
+}
+
