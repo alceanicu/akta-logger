@@ -1,4 +1,4 @@
-# Akta-logger - webextension for "FIREFOX-Quantum" browser
+# Akta-logger - add-on for "FIREFOX-Quantum" browser
 
 ## ChromePhp in "FIREFOX-Quantum" browser - an alternativ to "FirePHP" add-on
 
